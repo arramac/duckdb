@@ -10,6 +10,7 @@ namespace DuckDB
 {
 #pragma warning disable 1998
 #pragma warning disable 0169
+
     public class StoredProcedureFeed
     {
         public async Task<ResourceResponse<StoredProcedure>> CreateStoredProcedureAsync(

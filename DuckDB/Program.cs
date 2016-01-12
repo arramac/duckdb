@@ -49,7 +49,7 @@ namespace DuckDB
             FeedResponse<dynamic> results = await collection.ExecuteQuerySegmentedAsync<Song>(query);
             results = await collection.ExecuteQuerySegmentedAsync<Song>(query, new FeedOptions { RequestContinuation = results.ResponseContinuation });
 
-            await collection.UpdateThroughput(500);
+            await collection.UpdateThroughputAsync(500);
 
             await collection.StoredProcedures.CreateStoredProcedureAsync(new StoredProcedure { Id = "Aggregate", Body = "function() { ..}" });
         }

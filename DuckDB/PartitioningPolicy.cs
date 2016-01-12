@@ -1,5 +1,8 @@
 ﻿namespace DuckDB
 {
+    /// <summary>
+    /// Just a placeholder
+    /// </summary>
     public class PartitioningPolicy
     {
         public string PartitionKeyName { get; set; }
